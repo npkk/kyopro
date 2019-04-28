@@ -33,32 +33,27 @@ using vvb = vector<vb>;
 using pii = pair<int, int>;
 using pll = pair<i64, i64>;
 
-///////////////////////////////////////////////////////
-
-struct unionfind{
-    vi data;
-    unionfind(int n):data(n, -1){};
-    int root(int idx){
-        return data[idx] < 0 ? idx : data[idx] = root(data[idx]);
-    }
-    bool same(int l, int r){
-        return (l = root(l))==(r = root(r));
-    }
-    void join(int l, int r){
-        l = root(l); r = root(r);
-        if(l != r){
-            if(data[l] > data[r])swap(l, r);
-            data[l] += data[r];
-            data[r] = l;
-        }
-    }
-    int size(int idx){
-        return -data[root(idx)];
-    }
-};
-
 //////////////////////////////////////////////////
 
 int main(){
+    int n;
+    cin >> n;
+    vl a(n);
+    for(auto&& x:a)cin >> x;
+    i64 ret = 0;
+    int nval = 0;
+    vl b(n);
+    for(int i=0;i<n;i++){
+        b[i] = max(a[i], -a[i]);
+        ret += b[i];
+        if(a[i] < 0) nval++;
+    }
+    sort(b.begin(), b.end());
+    cerr << nval << " " << ret << endl;
+    if(nval & 1){
+        cout << ret - 2 * b[0] << endl;
+    }else{
+        cout << ret << endl;
+    }
     return 0;
 }

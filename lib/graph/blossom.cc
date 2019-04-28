@@ -33,35 +33,7 @@ using vvb = vector<vb>;
 using pii = pair<int, int>;
 using pll = pair<i64, i64>;
 
-template<class T>
-istream& operator >> (istream& is, T& vec){
-    for(auto&& x:vec) is >> x;
-    return is;
-}
-
-template<class T>
-auto operator<<(std::ostream& os, const T& vec)
-    -> typename std::conditional<true, std::ostream&, decltype(*vec.begin())>::type{
-    os << "[ ";
-    for(auto it = vec.begin(); it != vec.end(); ++it){
-        os << *it << (it+1 == vec.end() ? " " : ", ");
-    }
-    os << "]";
-    return os;
-}
-
 //////////////////////////////////////////////////
-
-template<typename T>
-struct edge{
-    int f, t;
-    T data;
-    edge(int f_, int t_, T data_):f(f_), t(t_), data(data_){};
-    edge(){};
-    bool operator<(const edge& r){
-        return this->data < r.data;
-    }
-};
 
 template<typename T>
 struct edge{
@@ -89,7 +61,7 @@ struct graph{
 
 //////////////////////////////////////////////////
 
-
+// TODO: Implementation!!!!!
 
 //////////////////////////////////////////////////
 

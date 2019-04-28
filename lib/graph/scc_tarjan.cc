@@ -33,23 +33,6 @@ using vvb = vector<vb>;
 using pii = pair<int, int>;
 using pll = pair<i64, i64>;
 
-template<class T>
-istream& operator >> (istream& is, T& vec){
-    for(auto&& x:vec) is >> x;
-    return is;
-}
-
-template<class T>
-auto operator<<(std::ostream& os, const T& vec)
-    -> typename std::conditional<true, std::ostream&, decltype(*vec.begin())>::type{
-    os << "[ ";
-    for(auto it = vec.begin(); it != vec.end(); ++it){
-        os << *it << (it+1 == vec.end() ? " " : ", ");
-    }
-    os << "]";
-    return os;
-}
-
 //////////////////////////////////////////////////
 
 template<typename T>

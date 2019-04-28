@@ -8,4 +8,8 @@ If you find a bug, please issue.
 
 ## USAGE
 
-now, copy /lib/template.cc, and some snippets from /lib/category/algorithm.cc
+- setup.py
+setup for contest.
+
+- archive.py
+archive files to archives.
