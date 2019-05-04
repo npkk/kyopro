@@ -13,5 +13,5 @@ for char in range(ord('a'), ord('a') + args.questions):
     sp.run([
         'cp',
         'lib/template.cc',
-        'workspace/{}.cc'.format(char)
+        'src/{}.cc'.format(char)
     ])

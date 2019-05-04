@@ -17,11 +17,11 @@ sp.run([
 ])
 sp.run([
     'mv',
-    'workspace/*.cc',
+    'src/*.cc',
     'archives/{}/'.format(args.name)
 ])
 sp.run([
     'rm',
     '-r',
-    'workspace/*'
+    'src/*'
 ])

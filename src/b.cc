@@ -37,5 +37,9 @@ using pll = pair<i64, i64>;
 
 int main(){
     
+    int a = 3;
+    a += 2;
+    cout << a << endl;
+
     return 0;
 }
