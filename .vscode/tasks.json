@@ -13,7 +13,7 @@
                 "-O2",
                 "-o",
                 "`wslpath",
-                "'${workspaceRoot}\\debug\\${fileBasenameNoExtension}.out'`",
+                "'${workspaceRoot}\\target\\debug\\${fileBasenameNoExtension}.out'`",
                 "`wslpath",
                 "'${file}'`",
             ],
